@@ -1,0 +1,15 @@
+@media screen and (max-width: 768px){
+    nav.desktop{
+        display: none;
+    }
+    .equipe{
+        width: 100%;
+    }
+    .sobre-equipe{
+        padding: 40px 0;
+        width: 100%;
+    }
+    .sobre-equipe p{
+        text-align: justify;
+    }
+}
