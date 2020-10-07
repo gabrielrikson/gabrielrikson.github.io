@@ -213,6 +213,36 @@ section.servicos{
     opacity: 0;
 }
 
+
+section.contato{
+    width: 100%;
+    min-height: 700px;
+}
+.title-contato{
+    padding-top: 80px;
+}
+.formulario{
+    float: left;
+    width: 50%;
+    padding-top: 40px;
+}
+
+.formulario input[type=text],input[type=email]{
+    width: 100%;
+    margin: 10px 0;
+    padding: 6px;
+}
+.formulario textarea{
+    min-height: 130px;
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+}
+
+.contato-midia-socials{
+    float: left;
+}
+
 footer{
     width: 100%;
     position: relative;
