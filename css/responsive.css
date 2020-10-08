@@ -6,7 +6,7 @@
         width: 100%;
     }
     .sobre-equipe{
-        padding: 40px 0;
+        padding: 40px 20px;
         width: 100%;
     }
     .sobre-equipe p{
@@ -20,5 +20,12 @@
     .contato-midia-socials{
         width: 100%;
         margin: 50px 0;
+    }
+    .servicos-gallery{
+        width: 90%;
+    }
+    .gallery img{
+        height: 200px;
+        width: 100%;
     }
 }
