@@ -209,10 +209,10 @@
                 <h2>Contato</h2>
             </div><!--title-contato-->
             <div class="formulario">
-                <form action="">
-                    <input type="text" placeholder="Seu nome completo">
-                    <input type="email" placeholder="Seu E-mail">
-                    <textarea placeholder="Sua mensagem..."></textarea>
+                <form method="POST" action="php/email.php">
+                    <input type="text" name="nome" placeholder="Seu nome completo">
+                    <input type="email" name="email" placeholder="Seu E-mail">
+                    <textarea name="message" placeholder="Sua mensagem..."></textarea>
                     <input type="submit" value="Enviar">        
                 </form>
             </div><!--formulario-->
