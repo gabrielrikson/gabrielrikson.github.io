@@ -1,0 +1,23 @@
+.parallax{
+    width: 100%;
+    height: 250px;
+    background-image: url('../images/banner-3.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.content-parallax{
+    margin: 0 auto;
+    width: 35%;
+    padding: 90px 0;
+}
+.content-parallax h2{
+    font-family: 'Roboto';
+    padding: 20px;
+    text-align: center;
+    font-size: 36px;
+    color: rgb(12, 247, 196);
+    border: 1px solid rgb(12, 247, 196);
+    font-weight: 200;
+}

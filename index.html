@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300&family=Open+Sans:wght@300;400&family=Titillium+Web&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Titillium+Web&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- CSS DIVIDIDO EM PARTES PARA FÁCIL MANUTENÇÃO -->
+        <link rel="stylesheet" href="css/styleAuxiliar&Reset.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/sectionBannerMain.css">
+        <link rel="stylesheet" href="css/sectionSobre.css">
+        <link rel="stylesheet" href="css/parallax.css">
+        <link rel="stylesheet" href="css/sectionServicosGaleria.css">
+        <link rel="stylesheet" href="css/sectionContato.css">
+        <link rel="stylesheet" href="css/sectionContato.css">
+        <link rel="stylesheet" href="css/footer.css">
+    <!-- CSS DIVIDIDO EM PARTES PARA FÁCIL MANUTENÇÃO -->
+    
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/lightbox.min.css">
@@ -16,7 +28,7 @@
     <header>
         <div class="center">
             <div class="logomarca">
-                <a href="">JD Vidros</a>
+                <a href="">Gabriel.Rikson</a>
             </div><!--logomarca-->
 
             <nav class="desktop">
@@ -28,6 +40,18 @@
                     <li><a href="">Contato</a></li>
                 </ul>
             </nav><!--nav.desktop-->
+
+            <nav class="mobile">
+                <div class="logo-mobile"><a href="">Gabriel.Rikson</a></div><!--logomarca-->
+				<h3><i class="fa fa-bars"></i></h3>
+					<ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Serviços</a></li>
+                        <li><a href="">Galeria</a></li>
+                        <li><a href="">Contato</a></li>
+					</ul>
+			</nav> <!-- nav.mobile -->
             <div class="clear"></div>
         </div><!--center-->
     </header>
@@ -83,7 +107,9 @@
                         <a href=""><i class="fa fa-facebook"></i></a>
                         <a href=""><i class="fa fa-instagram"></i></a>
                     </div><!--midia-socials-->
+
                 </div><!--sobre-equipe-->
+
             <div class="clear"></div>
         </div><!--center-->
     </section><!--servicos-->    
@@ -205,6 +231,13 @@
         <p>Desenvolvido por Gabriel Rikson <i class="fa fa-copyright"></i></p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script>
+		$(function(){
+			$('nav.mobile h3').click(function(){
+				$('nav.mobile ul').slideToggle();
+			})
+		})
+	</script>
 </body>
 </html>

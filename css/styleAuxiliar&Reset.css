@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+html,body{
+    height: 100%;
+}
+
+.clear{clear: both;}
+
+.center{
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.barra{
+    height: 6px;
+    width: 100px;
+    background-color: rgb(75, 214, 184);
+}

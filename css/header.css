@@ -1,0 +1,42 @@
+header{
+    width: 100%;
+    background-color:  rgb(0, 110, 83);
+    border-bottom: 1px solid #ccc;
+}
+
+header .logomarca{
+    float: left;
+    padding: 16px 0px;
+}
+.logomarca a{
+    font-family: 'Roboto';
+    font-size: 34px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+header nav.desktop{
+    float: right;
+}
+nav.desktop li{
+    text-align: center;
+    display: inline-block;
+    padding: 24px 0px;
+    padding-left: 30px; 
+}
+nav.desktop a{
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+nav.desktop a:hover{
+    transition: .5s;
+    color: rgb(125, 216, 187);
+}
+
+nav.mobile{
+    display: none;
+    float: right;
+}

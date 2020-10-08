@@ -1,7 +1,49 @@
 @media screen and (max-width: 768px){
-    nav.desktop{
+    nav.desktop,.logomarca{
         display: none;
     }
+    .logo-mobile a{
+		font-size: 26px;
+		color: #103b34;
+		text-decoration: initial;
+	}
+	nav.mobile{
+		position: relative;
+		display: block;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+	}
+
+	nav.mobile h3{
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 0;
+        color: rgb(31, 90, 67);
+        font-size: 26px;
+	}
+	nav.mobile ul{
+		display: none;
+		list-style: none;
+		background-color:  rgb(2, 184, 144);
+		position: absolute;
+		left: -2%;
+		top: 36px;
+		width: 104%;
+		text-align: center;
+	}
+	nav.mobile li{
+		padding: 8px 0;
+		border-top: 1px solid white;
+	}
+	nav.mobile > ul > li > a{
+        color: rgb(255, 255, 255);
+        font-size: 19px;
+		text-decoration: none;
+		font-weight: lighter;
+	}
+
     .equipe{
         width: 100%;
     }
@@ -11,6 +53,10 @@
     }
     .sobre-equipe p{
         text-align: justify;
+    }
+
+    .content-parallax{
+        width: 80%;
     }
 
     .formulario{
@@ -28,4 +74,6 @@
         height: 200px;
         width: 100%;
     }
+
+    
 }
