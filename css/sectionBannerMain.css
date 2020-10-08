@@ -1,5 +1,4 @@
 section.banner-main{
-    height: 620px;
     width: 100%;
     background-image: url('../images/banner-4.jpg');
     background-repeat: no-repeat;
@@ -23,7 +22,7 @@ section.banner-main{
 .msg{
     width: 90%;
     margin: 0px auto;
-    padding: 15% 0%;
+    padding: 25% 0%;
     z-index: 4;
 }
 .msg h2{

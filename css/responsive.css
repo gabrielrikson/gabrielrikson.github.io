@@ -3,9 +3,10 @@
         display: none;
     }
     .logo-mobile a{
+        font-weight: 400;
 		font-size: 26px;
-		color: #103b34;
-		text-decoration: initial;
+		color: #ffffff;
+		text-decoration: none;
 	}
 	nav.mobile{
 		position: relative;
@@ -20,13 +21,13 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-        color: rgb(31, 90, 67);
+        color: rgb(255, 255, 255);
         font-size: 26px;
 	}
 	nav.mobile ul{
 		display: none;
 		list-style: none;
-		background-color:  rgb(2, 184, 144);
+		background-color:  rgb(0, 110, 82);
 		position: absolute;
 		left: -2%;
 		top: 36px;
@@ -39,7 +40,7 @@
 	}
 	nav.mobile > ul > li > a{
         color: rgb(255, 255, 255);
-        font-size: 19px;
+        font-size: 18px;
 		text-decoration: none;
 		font-weight: lighter;
 	}
