@@ -39,3 +39,14 @@ section.banner-main{
     color: white;
     font-weight: 500;
 }
+
+.icon-whatsapp{
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    padding: 0 20px;
+    z-index: 999;
+}
+.icon-whatsapp img{
+    height: 100px;
+}
