@@ -1,0 +1,60 @@
+section.content > .container > h2{
+    margin-top: 10%;
+    padding-bottom: 2%;
+    font-size: 28pt;
+    color: rgb(0, 168, 151);
+}
+
+section.content .servicos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box-servicos{
+    display: flex;
+    flex-direction: column;
+    flex: 30%;
+    margin: 1%;
+    padding: 1%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 6px;
+    -webkit-box-shadow: 13px 10px 48px -8px #000000; 
+    box-shadow: 13px 10px 48px -8px #7a7a7a;
+}
+
+.box-servicos i{
+    font-size: 28pt;
+    color: rgb(0, 168, 151);
+    padding: 2% 0;
+}
+
+.box-servicos h2{
+    padding: 1% 0;
+    color: rgb(0, 168, 151);
+    font-family: 'Saira Extra Condensed';
+    font-weight: 500;
+    font-size: 26pt;
+}
+
+.box-servicos p{
+    padding: 3% 2%;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width: 768px){
+    section.content > .container > h2{
+        text-align: center;
+    }
+    .servicos{
+        flex-direction: column;
+    }
+    .box-servicos{
+        flex: 100%;
+        margin: 4%;
+    }
+}

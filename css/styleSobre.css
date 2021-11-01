@@ -1,0 +1,64 @@
+section.content h2{
+    font-size: 38pt;
+    margin-top: 10%;
+    font-family: 'Saira Extra Condensed';
+    font-weight: 200;
+}
+
+section.content h3{
+    padding: 1% 0;
+    font-size: 22pt;
+    font-family: 'Saira Extra Condensed';
+    font-weight: 200;
+}
+
+section.content h4{
+    width: 90%;
+    text-align: justify;
+    font-family: 'Oswald';
+    font-size: 18pt;
+    font-weight: 400;
+    margin: 1% 1%;
+    padding-top: 1%;
+}
+
+section.content h5{
+    margin-top: 3%;
+    font-size: 18pt;
+    font-family: 'Saira Extra Condensed';
+    font-weight: 200;
+}
+
+section.content p{
+    margin-top: 1%;
+    margin-right: 2%;
+    font-size: 60pt;
+    display: inline-block;
+}
+
+@media screen and (max-width: 900px){
+    section.content{
+        text-align: center;
+    }
+    section.content h2{
+        margin-top: 10%;
+    }
+    section.content h3{
+        padding-top: 3%;
+    }
+    section.content h4{
+        padding-top: 3%;
+    }
+    section.content h5{
+        padding: 2% 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    section.content h2{
+        margin-top: 10%;
+    }
+    .container{
+        padding: 0 8%;
+    }
+}
