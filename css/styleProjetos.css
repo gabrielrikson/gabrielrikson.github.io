@@ -2,6 +2,7 @@ section.content .galeria{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-bottom: 100px;
 }
 
 section.content > .container > h2{
@@ -13,11 +14,11 @@ section.content > .container > h2{
 
 .box{
     display: flex;
-    flex: 30%;
+    width: 30%;
     flex-direction: column;
     border-radius: 6px;
     -webkit-box-shadow: 13px 10px 48px -8px #000000; 
-box-shadow: 13px 10px 48px -8px #7a7a7a;
+    box-shadow: 13px 10px 48px -8px #7a7a7a;
     margin: 1%;
     padding: 1%;
 }
