@@ -608,14 +608,13 @@ footer {
 
     /* ---- BANNER MAIN ---- */
     section.banner-main {
-        padding-top: 110px; /* Mais espaço no topo */
         padding-bottom: 50px;
         text-align: center;
         min-height: auto;
     }
 
     section.banner-main .container {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .banner-main-info h1 {
@@ -640,7 +639,8 @@ footer {
 
     /* Esconde a foto flutuante no celular */
     .banner-main-profile-pic img {
-        display: none;
+        /* display: none; */
+        height: 300px;
     }
 
     /* ---- SEÇÃO SOBRE ---- */
