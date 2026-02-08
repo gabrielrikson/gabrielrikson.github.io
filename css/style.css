@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@100;300;400;500&display=swap');
+
+/* ================= RESET GERAL ================= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 80px; /* Compensa o header fixo */
+    font-weight: normal;
+    background-color: #f5f7fa;
+}
+
+/* ================= CLASSES UTILITÁRIAS ================= */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.w20 { width: 20%; }
+.w30 { width: 30%; }
+.w40 { width: 40%; }
+.w50 { width: 50%; }
+.w60 { width: 60%; }
+.w70 { width: 70%; }
+.w100 { width: 100%; }
+
+/* ================= HEADER (DESKTOP PADRÃO) ================= */
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 15px 4%;
+    z-index: 1000; /* Garante que fique acima de tudo */
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a.logomarca {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu Desktop */
+nav .menu-desktop a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Efeito Hover no Menu Desktop */
+nav .menu-desktop a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 50%;
+    background-color: #0066e4;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav .menu-desktop a:hover::after {
+    width: 80%;
+}
+
+nav .menu-desktop a:hover {
+    color: #0066e4;
+}
+
+/* Esconde elementos mobile no desktop */
+.menu-toggle, 
+.nav-mobile {
+    display: none;
+}
+
+/* ================= BANNER MAIN (HERO) ================= */
+section.banner-main {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+}
+
+section.banner-main .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.badge-ola {
+    background-color: #e6f0ff;
+    color: #0066e4;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.banner-main-info h1 {
+    font-size: 48px;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.banner-main-info h2 {
+    font-size: 20px;
+    color: #0066e4;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.banner-main-info p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 90%;
+    margin-bottom: 30px;
+}
+
+/* Botões do Banner */
+.banner-main-info-links {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: #0066e4;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 2px solid #0066e4;
+}
+
+.btn-primary:hover {
+    background-color: #004dac;
+    border-color: #004dac;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 228, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #0066e4;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 2px solid #0066e4;
+}
+
+.btn-secondary:hover {
+    background-color: #e6f0ff;
+    transform: translateY(-2px);
+}
+
+/* Imagem Flutuante */
+.banner-main-profile-pic {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-main-profile-pic img {
+    height: 450px;
+}
+
+.floating-img {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ================= SEÇÃO SOBRE ================= */
+section.sobre {
+    background: linear-gradient(135deg, #004dac 0%, #003380 100%);
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.sobre-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section.sobre h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+section.sobre h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #4da6ff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+section.sobre p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e6e6e6;
+    margin-bottom: 20px;
+}
+
+section.sobre .resumo {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 40px;
+}
+
+.stat-item span {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #4da6ff;
+}
+
+.stat-item p {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #ccc;
+}
+
+/* ================= SEÇÃO TECNOLOGIAS (CARDS) ================= */
+section .grid-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.tech-card {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-bottom: 4px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    border-bottom-color: #0066e4;
+    box-shadow: 0 10px 25px rgba(0, 102, 228, 0.15);
+}
+
+.tech-card .icon-box {
+    font-size: 32px;
+    color: #0066e4;
+    margin-bottom: 20px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f6ff;
+    border-radius: 50%;
+}
+
+.tech-card h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.tech-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ================= SEÇÃO PROJETOS ================= */
+section .grid-projetos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+}
+
+.card-projeto {
+    background-color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 8px;
+    border-left: 5px solid #0066e4;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 77, 172, 0.15);
+}
+
+.card-projeto .categoria {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0066e4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card-projeto h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.card-projeto p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* SECTION CONTATO */
+
+/* ================= SEÇÃO CONTATO ================= */
+section.contato {
+    background-color: #f5f7fa; /* Fundo cinza claro para separar da seção anterior */
+    padding: 60px 0 80px 0;
+}
+
+/* Container do Grid (Info + Form) */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info ocupa menos, Form ocupa mais */
+    gap: 50px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra elegante */
+}
+
+/* --- LADO ESQUERDO (INFORMAÇÕES) --- */
+.contact-info h3 {
+    font-size: 24px;
+    color: #0066e4;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Item de contato (ícone + texto) */
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Estilo dos ícones redondos */
+.info-item i {
+    font-size: 20px;
+    color: #0066e4;
+    background-color: #e6f0ff; /* Fundo azul bem clarinho */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.info-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.info-item a, 
+.info-item p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0;
+}
+
+.info-item a:hover {
+    color: #0066e4;
+    text-decoration: underline;
+}
+
+/* --- LADO DIREITO (FORMULÁRIO) --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fcfcfc;
+    transition: 0.3s;
+    outline: none; /* Remove a borda padrão do navegador */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Efeito ao clicar no campo */
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #0066e4;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 102, 228, 0.1);
+}
+
+/* Botão de Enviar */
+.btn-submit {
+    background-color: #0066e4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #004dac;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 60, 150, 0.2);
+}
+
+#charCount {
+    display: block;
+    text-align: right; /* Joga pra direita */
+    font-size: 12px;
+    color: #999; /* Cinza discreto */
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #004dac; /* Azul escuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+/* ================================================================= */
+/* ===================== RESPONSIVO (MOBILE) ======================= */
+/* ================================================================= */
+
+@media screen and (max-width: 768px) {
+    
+    .container {
+        padding: 0 5%;
+    }
+
+    /* ---- HEADER MOBILE ---- */
+    /* Permite que o menu "caia" para a linha de baixo quando aberto */
+    header .container {
+        flex-wrap: wrap; 
+    }
+
+    /* Esconde menu de PC */
+    nav.nav-desktop {
+        display: none;
+    }
+
+    /* Botão Hambúrguer Visível */
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #000;
+    }
+
+    /* O container do menu precisa estar visível (block), mas o conteúdo oculto */
+    .nav-mobile {
+        display: block;
+        width: 100%;
+        order: 3; /* Força o menu a ser o último elemento */
+    }
+
+    /* Lista de links (Escondida por padrão) */
+    nav .menu-mobile {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 15px;
+        background-color: white; /* Fundo branco para não ficar transparente */
+        border-top: 1px solid #eee;
+        padding-bottom: 15px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.05); /* Sombra embaixo */
+    }
+
+    /* JS adiciona classe .active para mostrar */
+    nav .menu-mobile.active {
+        display: flex;
+    }
+
+    nav .menu-mobile a {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #f5f5f5;
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* ---- LARGURAS ---- */
+    .w20, .w30, .w40, .w50, .w60, .w70, .w100 {
+        width: 100%;
+    }
+
+    /* ---- BANNER MAIN ---- */
+    section.banner-main {
+        padding-top: 110px; /* Mais espaço no topo */
+        padding-bottom: 50px;
+        text-align: center;
+        min-height: auto;
+    }
+
+    section.banner-main .container {
+        flex-direction: column;
+    }
+
+    .banner-main-info h1 {
+        font-size: 32px;
+    }
+
+    .banner-main-info p {
+        font-size: 16px;
+        margin: 0 auto 30px auto;
+    }
+
+    /* Botões empilhados */
+    .banner-main-info-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Esconde a foto flutuante no celular */
+    .banner-main-profile-pic img {
+        display: none;
+    }
+
+    /* ---- SEÇÃO SOBRE ---- */
+    .stats-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .stat-item span {
+        font-size: 28px;
+    }
+
+    /* ---- TECNOLOGIAS (1 COLUNA) ---- */
+    section .grid-tecnologias {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-card {
+        padding: 20px;
+    }
+
+    /* ---- PROJETOS (1 COLUNA) ---- */
+    section .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-projeto {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    /* ================= CORREÇÃO CONTATO (MOBILE) ================= */
+    
+    /* Força o grid a virar 1 coluna única */
+    .contact-wrapper {
+        grid-template-columns: 1fr !important; /* Importante para garantir que sobrescreva */
+        display: flex; /* Muda para Flexbox vertical para garantir */
+        flex-direction: column;
+        padding: 20px;
+        gap: 40px;
+    }
+
+    /* Centraliza as informações (Lado esquerdo vira Topo) */
+    .contact-info {
+        text-align: center;
+        border-bottom: 1px solid #eee; /* Uma linha separando */
+        padding-bottom: 30px;
+        width: 100%;
+    }
+
+    /* Arruma os ícones e textos para ficarem centralizados */
+    .info-item {
+        flex-direction: column; /* Ícone em cima, texto embaixo */
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .info-item i {
+        margin-right: 0; /* Tira a margem da direita */
+        margin-bottom: 10px; /* Coloca margem embaixo */
+    }
+    
+    .info-item div {
+        align-items: center; /* Centraliza o texto do flex */
+    }
+
+    /* O Formulário ocupa 100% da tela */
+    .contact-form {
+        width: 100%;
+    }
+}
