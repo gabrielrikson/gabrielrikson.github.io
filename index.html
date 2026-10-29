@@ -194,7 +194,7 @@
                     <i class="fa-brands fa-whatsapp"></i>
                     <div>
                         <span>WhatsApp (Prioritário)</span>
-                        <a href="https://wa.me/5521999999999" target="_blank">-</a>
+                        <a href="https://wa.me/" target="_blank">-</a>
                     </div>
                 </div>
 
@@ -233,6 +233,11 @@
             <span id="charCount">0 / 1000</span>
         </div>
 
+         <!-- Proteção Cloudflare Turnstile -->
+        <div class="form-group">
+            <div class="cf-turnstile" data-sitekey="SUA_SITE_KEY"></div>
+        </div>
+
         <button type="submit" class="btn-submit">Enviar Mensagem</button>
         
         <p id="my-form-status"></p>
@@ -247,6 +252,8 @@
 </footer>
 
 <script src="scripts/script.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 </body>
 
 </html>
